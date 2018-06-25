@@ -1,0 +1,6 @@
+To remove a file which has already been uploaded or added 
+issue the following command.  This comes in handy when 
+a file or files are added to the .gitingore file after 
+they have been uploaded.
+
+git rm --cached FILENAME
