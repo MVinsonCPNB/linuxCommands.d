@@ -2,3 +2,8 @@
 
 chown <userName>: vendor 
 
+ls -l 1.txt
+-rw-rw-r-- 1 root himanshu 0 Jun 21 12:12 1.txt
+sudo chown :users 1.txt
+ls -l 1.txt
+-rw-rw-r-- 1 root users 0 Jun 21 12:12 1.txt
