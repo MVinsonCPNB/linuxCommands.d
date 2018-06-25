@@ -1,0 +1,15 @@
+who is used to display the different users currently logged on
+
+ 
+who | cut -d' ' -f1 | sort
+Harry
+paul
+paul
+root
+
+who | cut -d' ' -f1 | sort | uniq
+Haryy
+pual 
+root
+
+

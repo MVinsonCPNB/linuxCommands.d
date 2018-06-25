@@ -1,0 +1,36 @@
+#CHECK VERISON AND LOGIN
+heroku version
+
+heroku login
+
+heroku keys:add               -- adds your SSH key from your system to heroku repo
+
+
+
+#Deploy your app to the heroku servers
+
+heroku create          -- create a place on the Heroku servers for an app to live
+
+git push heroku master    -- pushes the master branch to the heroku repo
+
+
+#RENAME AN APP INSTEAD OF TAKING WHAT THE CREATE COMMAND OFFERS
+
+heroku rename rails-tutorial-hello
+
+#UPDATE THE HEROKU DATABASE WITH THE NECESSARY DATA MODELS
+deroku run rails db:migrate
+
+#HEROKU HELP
+heroku help               -- display the help for Heroku commands
+
+#COMMON ERROR WHEN DEPLOYING
+gem install nokogiri
+bundle install --without production
+bundle update
+git commint -a -m "Fix nokogiri"
+git push
+git push heroku master
+
+
+

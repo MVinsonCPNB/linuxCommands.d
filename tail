@@ -1,0 +1,17 @@
+The tail command will view the end of a file's lines
+one feature is the -f option which keeps the file 
+open and when another process adds to the file 
+it will printout to screen:
+
+Example:
+tailing.txt
+tail -f tailing.txt
+hello
+world
+
+in the other shell:
+echo hello >> tailing.txt
+echo world >> tailing.txt
+
+Example: 
+tail -3 [filename].txt (will display the last 4 lines of the file)

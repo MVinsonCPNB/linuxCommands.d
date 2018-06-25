@@ -1,0 +1,19 @@
+Activate the nocolobber shell option:
+set -o noclobber
+      or
+set -C
+
+
+Verify:
+ls /etc > etc.txt
+ls /etc > etc.txt (should not work)
+
+
+Check Activated Shell Options
+set -o
+  or
+echo himBCHs
+
+
+Deactivate the noclobber option:
+set +o noclobber

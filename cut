@@ -1,0 +1,28 @@
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+mvinson:x:1000:1000:Michael Vinson:/home/mvinson:/bin/bash
+
+(above is the last four line of /etc/passwd)
+
+cut can search a line and using a delimiter can assign column 
+numbers to each delimiter encountered.  The -d followed the 
+demiliter is an option.  The -f followed by a number or numbers
+seperated by a comma will print the fields or columns according 
+to their delimiter enumeration. 
+
+Example: 
+cut -d: -f1,3 /etc/passwd | tail -4
+OUTPUTS:
+sshd:74
+tss:59
+tcpdump:72
+mvinson:1000
+Example: (using the -c option to speficy the character position)
+cut -c2-7 /etc/passwd | tail -4
+OUTPUT:
+shd:x:
+ss:x:5
+cpdump
+vinson
+

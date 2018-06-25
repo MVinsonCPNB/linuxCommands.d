@@ -1,0 +1,11 @@
+sort is a command used to sort an file and its contents.
+Each line is sorted, each column can be specifically sorted
+by using the -k option.  The -n option can be used to instruct
+the sort to sort by numerical order, see examples below.
+
+Example: 
+sort country.txt
+(will sort using the first character of each line alphibetically)
+sort -k1 country.txt
+(will sort using after splitting up each line into columns)
+sort -n -k1 will sort the data numerically

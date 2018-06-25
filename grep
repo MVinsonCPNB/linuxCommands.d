@@ -1,0 +1,43 @@
+grep is a filter which revieves a stream from stdout.
+The stream is then check for a sequence, if the sequence
+is encountered, the whole line of text is displayed with 
+the sequence displayed in red.  
+Example: 
+cat tennis.txt | grep Williams
+OUTPUT:
+Serena Williams, usa
+Venus Williams, USA
+
+Example 2:
+grep Williams tennis.txt
+
+Example 3: (removes the difference between uppercase and 
+lower case.
+
+grep -i Bel tennis.txt
+OUTPUT: 
+Kim Clijsters, BEL
+Justing Henin, Bel
+
+Example 4: the -v option prints all line not matching the pattern
+grep -v Fra tennis.txt
+OUTPUT:
+Kim Clijsters, BEL
+Justing Henin, Bel
+Serena Williams, usa
+Venus Williams, USA
+
+Example 5: using both options -vi will cause all lines without the pattern
+to be display with out bias to upper or lowercase characters.
+
+grep -vi usa tennis.txt
+OUTPUT:
+Amelie Mauresmo, Fra
+Kim Clijsters, BEL
+Justing Henin, Bel
+
+To include the line before or after the patter used the options
+grep -A1     (includes one line after the pattern line)
+grep -B1     (include one line before the pattern lin)
+grep -C1     (inclused on line before and after the pattern line)
+

@@ -1,0 +1,25 @@
+#scaffold for controller
+rails generate controller StaticPages home help
+       -- <above> generates a controller for staticPages with two actions home and help
+	-- generates file named static_pages_controller.rb
+#scaffold commands undo
+rails destroy controller StaticPages home help
+
+#scaffold for model
+rails generate model User name:string email:string
+#destroy model
+rails destroy model User
+
+#database
+rails db:migrate   	-- Migrations change the state of the database using the command
+rails db:rollback	-- undo a single migration step using
+rails db:migrate VERSION=0   	-- takes the database back to the very beginning
+
+
+#rails common commands
+rails server
+rails console
+rails generate
+rails test
+bundle install
+

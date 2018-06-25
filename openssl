@@ -1,0 +1,5 @@
+To create a server.key and server.crt using the following commands
+
+openssl req -new -x509 -nodes -out server.crt -keyout server.key
+
+when asked for the domain name use the URL of the website homepage

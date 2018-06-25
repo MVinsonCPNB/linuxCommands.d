@@ -1,0 +1,18 @@
+compare is used to compare the contents of a file against anothers
+
+for example: 
+comm list1.txt list2.txt
+OUTPUTS:
+                   Abba
+Bowie
+                   Cure
+                   Queen
+Sweet
+         Turner
+
+using options the ability to remove columns are done like this:
+comm -12 list1.txt list2.txt
+OUTPUT:
+Abba
+Cure
+Queen

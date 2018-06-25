@@ -1,0 +1,8 @@
+the unique command will remove multiple duplicates from a sorted list
+sort music.txt |uniq 
+
+To sort and count if dulipates are presesnt use the -c option
+sort music.txt |uniq -c
+1 Abba
+1 Brel
+2 Queen

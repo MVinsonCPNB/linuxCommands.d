@@ -1,0 +1,1 @@
+fdisk -l     : will list all connected drives to the system

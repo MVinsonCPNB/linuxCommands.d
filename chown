@@ -1,0 +1,4 @@
+# reassign the <username>  as owner of folder vendor
+
+chown <userName>: vendor 
+

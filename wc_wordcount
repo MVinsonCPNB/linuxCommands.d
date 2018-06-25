@@ -1,0 +1,5 @@
+wc can be used to count, lines, words, characters, bytes, etc.
+Example:
+wc tennis.txt
+OUTPUT:
+5 (lines) 15 (words) 100 (bytes)

@@ -1,0 +1,49 @@
+#INITIAL SETUP
+git init 
+git add -A
+git commit -m "Initialize repository"
+
+#CREATE A REPOSITORY USING THE BITBUCKET WEBSITE AND CONNECT TO IT
+git remote add origin git@bitbuckey.org:<username>/toy_app.git
+git push -u origin --all
+
+
+#COMMON GIT COMMANDS
+git status 
+git pull            -- will update the current Branch or Master
+git commit -m "Add your commit comment here"
+git log
+git checkout        -- shows which commit your on
+git checkout -f     -- forces the changes to be undo as long as a commit has not been issued
+
+git push            -- pushes the changes to the remote server
+
+#GIT BRANCHES
+git checkout -b modify-README          -- Switched to a new branch 'modify-README'
+git branch                             -- shows which branch is currently active
+
+#ADD ALL FILES IN THE LOCAL REPO TO THE GIT VERISON CONTROL
+git add -A
+
+#SWITCH TO A BRANCH
+git checkout master
+git checkout modify-README
+
+#MERGE A BRANCH TO MASTER
+git checkout master
+git merge modify-README
+
+#DELETE A BRANCH 
+git branch -d modify-README                -- Deleted branch modify-README
+
+
+#EXAMPLE OF WHEN A MESSED UP BRANCH
+git checkout -b topic-branch
+<really mess up the branch>
+git add -A 
+git commit -a -m "Make a major mistake"
+git checkout master
+git branch -D topic-branch        -- Unlike the -d flage, the -D flag will delet the branch even though we haven't merged in the changes
+
+
+

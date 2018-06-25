@@ -1,0 +1,10 @@
+Save current directory to variable:
+var=$PWD
+
+Note:  using the quotes with the uppercase PWD provides the path
+when there is whitespace in names and not the pwd command.
+
+Additionally: 
+using backticks with an embedded shell works too and is as follows:
+var=$(echo `pwd`)
+

@@ -1,0 +1,6 @@
+cp file42 file 42.copy
+
+        or 
+
+cp file42 ~/Documents/backupDirectory
+(will copy the file to the backupDirectory)

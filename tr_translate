@@ -1,0 +1,11 @@
+tr command translates the characters as they appear in the stream
+for example: 
+tr 'ow' '45' < text.txt
+     if text.txt holds the values: one, two
+then the result will be
+     4ne, t5o
+
+Using a pipe with the translate command 
+cat tennis.txt | tr 'e' 'E'
+OUTPUT:
+reads the contents of tennis.txt and changes every e into an E.

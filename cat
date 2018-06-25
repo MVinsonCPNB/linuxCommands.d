@@ -1,0 +1,6 @@
+cat << eof > $lc/cat.txt
+text goes here
+...
+...
+to end the file enter
+eof

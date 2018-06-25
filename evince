@@ -1,0 +1,5 @@
+Open PDF files in terminal
+
+evince [filename].pdf
+
+will cause the terminal to be busy enless the process is forked

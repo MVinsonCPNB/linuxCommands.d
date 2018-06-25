@@ -1,0 +1,15 @@
+qpdf works with PDF files 
+The examples below show how to clean a PDF of metadata
+
+Examine a PDF file:
+
+qpdf --show-npages yourpdffile.pdf 
+
+
+
+Clean PDF file:
+
+qpdf --pages yourpdffile.pdf 1-z -- --empty newCleanpdffile.pdf
+
+eof
+EOF

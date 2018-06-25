@@ -1,0 +1,12 @@
+tee is a filter 
+it takes stdin stream and outputs the stream to stdout and stdin
+therefore, the a file can be created and while passing the stream
+to another pipe, see example below.
+Example:
+tac count.txt | tee temp.txt | tac
+
+Explination: 
+the contents of count is read by tac backward and passed to tee
+. tee then saves the recieved output to a file and passes the 
+stream to tac again which then reverses the count.txt back into
+its orininal order, and displays the on screen using stdout (1>)

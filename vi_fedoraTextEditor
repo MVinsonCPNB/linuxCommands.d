@@ -1,0 +1,7 @@
+vi [filename]
+press i to insert at the position of the cursor
+press :w to write the file
+press :w [new filename]  to save as a new file name
+press :q to quit
+press esc to exit --insert-- mode
+search www.safaribooksonline.com/library/view/fedora-linux/0596526822/ch04s04.html

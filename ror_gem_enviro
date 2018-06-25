@@ -1,0 +1,33 @@
+gem environment
+RubyGems Environment:
+  - RUBYGEMS VERSION: 2.6.14.1
+  - RUBY VERSION: 2.4.4 (2018-03-28 patchlevel 296) [x86_64-linux]
+  - INSTALLATION DIRECTORY: /usr/local/share/gems
+  - USER INSTALLATION DIRECTORY: /root/.gem/ruby
+  - RUBY EXECUTABLE: /usr/bin/ruby
+  - EXECUTABLE DIRECTORY: /usr/local/bin
+  - SPEC CACHE DIRECTORY: /root/.gem/specs
+  - SYSTEM CONFIGURATION DIRECTORY: /etc
+  - RUBYGEMS PLATFORMS:
+    - ruby
+    - x86_64-linux
+  - GEM PATHS:
+     - /usr/local/share/gems
+     - /root/.gem/ruby
+     - /usr/share/gems
+  - GEM CONFIGURATION:
+     - :update_sources => true
+     - :verbose => true
+     - :backtrace => false
+     - :bulk_threshold => 1000
+  - REMOTE SOURCES:
+     - https://rubygems.org/
+  - SHELL PATH:
+     - /usr/lib64/ccache
+     - /usr/local/bin
+     - /usr/local/sbin
+     - /usr/bin
+     - /usr/sbin
+     - /home/mv/.local/bin
+     - /home/mv/bin
+

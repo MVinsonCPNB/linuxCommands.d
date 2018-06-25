@@ -1,0 +1,10 @@
+base64 is used to encode and decode streams of characters
+for example:
+   base64 <<< linux-training.be
+prints: bGludXgtdHJaW5pbmcuYmUK
+Explination:  This is the encoded version of linux-training.be
+
+Note: there are two ways of passing informtion to the base64 command
+the <<< is called "here string' and the echo linux-training.be | base64
+is another way of executing the command, except this way uses one more
+process then using the here string.

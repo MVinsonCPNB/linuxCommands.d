@@ -1,0 +1,12 @@
+
+
+Assuming that your shell is Bash (the default in Ubuntu), these are the differences:
+
+    When running as a login shell, Bash will read ~/.bash_profile (or, if that doesn't exist, ~/.profile) on startup. In some cases, this file reads ~/.bashrc as well.
+
+    When running as a non-login shell, Bash will read ~/.bashrc.
+
+So, why do you see different behaviors when running as a login/non-login shell? Because your .bash_profile/.profile is doing different things than your .bashrc.
+
+The solution I would recommend in your case is to copy the customizations made to .bash_profile/.profile, paste them into .bashrc and disable "Run command as a login shell".
+

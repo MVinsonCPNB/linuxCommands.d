@@ -1,0 +1,6 @@
+
+
+*****Displays the directory size to include all subfolders
+
+du -hs /directoryName
+

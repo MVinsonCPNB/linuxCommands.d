@@ -1,0 +1,17 @@
+The stream editor can perform editing function in the stream using reqular expressions
+
+Example: 
+echo level5 | sed 's/5/43/'
+level43
+
+Example2:
+echo level5 level7 | sed 's/level/jump/g'
+(by adding the g to the end both occurrences of level will be replaced)
+OUTPUT:
+jump5 jump7
+Example:
+(whole lines contain a pattern can be removed)
+
+cat tennis.txt | sed '/BE/d'
+(this will search tennis.txt for the BE occurrence and remove the line from 
+the displaying on the screen)

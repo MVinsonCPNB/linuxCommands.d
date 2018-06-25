@@ -1,0 +1,3 @@
+mkdri /media/usb-drive
+mount /dev/sdc1 /media/usb-drive/
+cd /media/usb-drive

@@ -1,0 +1,29 @@
+rename used with the switch options
+Example:
+ls 
+abc.txt  file33.txt  file42.txt
+rename 's/\.txt/\.png/' *.txt
+ls
+abc.png  file33.png  file42.png
+
+Example: 
+rename 's/file/documnet/' *.png
+ls
+abc.png  document33.png document42.png
+
+
+RHEL/Fedora Rename Example:
+rename .conf .backup *.conf
+(changes all files with .conf into .backup files)
+
+Example: 
+rename one THREE *
+(changes any occurrence of one into THREE)
+
+
+(using option -vn will not make any chnages but will display the 
+changes made when the operation if performed without the options)
+Example:
+reanme -vn tail tails *
+OUTPUT:
+'tail' -> 'tails'
