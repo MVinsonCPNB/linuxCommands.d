@@ -1,0 +1,12 @@
+#To start mariadb on fedora
+
+sudo systemctl start mariadb
+
+#To setup MariaDB to start after system reboot
+sudo systemctl enable mariadb
+
+#To enter the program 
+mysql -u root -p (if a password has been already set)
+
+#secure installation run once after install
+sudo mysql_secure_installation
