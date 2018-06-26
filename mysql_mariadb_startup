@@ -4,7 +4,7 @@ sudo systemctl start mariadb
 
 #To setup MariaDB to start after system reboot
 sudo systemctl enable mariadb
-
+               disable
 #To enter the program 
 mysql -u root -p (if a password has been already set)
 
