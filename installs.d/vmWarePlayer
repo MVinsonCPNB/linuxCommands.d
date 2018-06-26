@@ -1,0 +1,50 @@
+How to install VMware Workstation 14.1.2 Player for Linux 64-bit
+
+download the file (below) NOT FREE VERSION
+https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/14_0
+
+FREE TRIAL VERSION
+https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
+
+
+You need to install some library for compile just open your terminal and type
+
+sudo dnf install kernel-headers kernel-devel gcc glibc-headers
+
+You need to change your current directory to dir where the downloaded file is
+
+cd $HOME/Downloads
+
+To run the installer you need to give execution permission. You can do it in terminal
+
+chmod +x Vmware-Workstation*12*.bundle
+
+or you can do it using gui, right click on file → Properties → Permissions and check the Execute checkbox
+
+Now you can run the installer, just type on terminal this
+
+sudo ./Vmware-Workstation*12*.bundle
+
+Follow the instructions of installer.
+
+If you run the VMware and get error about gcc you need to compile vmnet and vmmon.
+To do this you need to untar the files compile and copy compiled to modules, just use the commands
+
+cd /usr/lib/vmware/modules/source
+
+sudo tar -xvf vmnet.tar
+sudo tar -xvf vmmon.tar
+
+sudo make -C vmmon-only
+sudo make -C vmnet-only
+
+sudo mkdir /lib/modules/$(uname -r)/misc
+
+sudo cp vmmon-only/vmmon.ko /lib/modules/$(uname -)/misc
+sudo cp vmnet-only/vmnet.ko /lib/modules/$(uname -r)/misc
+
+sudo depmod -a
+
+Now you can enjoy the magic of virtualization
+
+

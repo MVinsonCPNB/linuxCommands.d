@@ -1,0 +1,27 @@
+How to install VirtualBox on Fedora 27
+Search youtube for How to Install Virtualbox on Fedora (28) (27) (26) (25)
+
+https://www.virtualbox.org/wiki/Downloads
+
+Nav: VirtualBox 5.2.12 platform packages << Linux distributions
+     << Fedora 26 / 27 / 28 << AMD 64 << save to downloads
+
+Nav:  Downloads << VirtualBox 5.1.10 Oracle VM VirtualBox
+     Extension Pack << All supported platforms << save to downloads
+
+Open the file explorer and navigate to downloads
+
+right click VirtualBox 5.1-2.1.10*.rpm << open with software install
+let install finish
+
+test the program and close
+
+Nav: Downloads << right click on the Extension Pack << open
+    install with Oracle VM with virtualBox
+
+
+
+
+
+
+
