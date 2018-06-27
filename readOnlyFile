@@ -1,0 +1,27 @@
+
+You should set necessary directory permissions. For directories they are:
+
+read: permitted to view files and sub-directories in that directory
+write: permitted to create files and sub-directories in that directory
+execute: permitted to enter into a directory.
+For files the situation is similar, it's quite obvious, so you can handle it on your own.
+
+Numeric these permissions:
+
+read - 4
+write - 2
+execute - 1
+To edit permissions use chmod. Usage: chmod xyz <file or directory>
+
+x - the sum of owner permissions
+y - the sum of owner group permissions
+z - the sum of rest users/groups permissions
+Example:
+
+$ chmod -R 664 /home/jack/
+jack and jack's group will have read+write access to /home/jack and all it's sub-directories. The rest will have only read access. -R option here used to recursively set permissions.
+
+Other example:
+
+$ chmod 700 /home/jack/video/
+will give jack full access to /home/jack/videodirectory. See also: chown, chgrp for changing owner and owning group.
