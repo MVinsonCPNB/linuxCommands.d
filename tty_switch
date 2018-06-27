@@ -1,0 +1,15 @@
+# https://docs.fedoraproject.org/f28/system-administrators-guide/basic-system-configuration/Opening_GUI_Applications.html
+
+# Switch to a new console 
+
+   Ctrl +  Alt + F2 though F6
+
+# Force a GUI to open on a specific dispaly
+# NOTE: press Ctrl + Alt + F1, to return to the desktop 
+    $ DISPLAY=:0 gnome-shell --replace &
+
+# Command below shows both the DISPLAY variable as well as the TTY that X is running on, tty1.  The who command will show (:1) meaning display 1
+
+   $ ps aux|grep /usr/bin/X
+
+   $ who 
