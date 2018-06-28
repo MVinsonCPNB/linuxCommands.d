@@ -1,0 +1,3 @@
+# Convert OGV file to AVI
+
+ $ sudo yum install ffmpeg

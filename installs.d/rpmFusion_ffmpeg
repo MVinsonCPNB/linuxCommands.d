@@ -1,0 +1,10 @@
+# Instructions found at
+ https://fedora.pkgs.org/27/rpmfusion-free-x86_64/ffmpeg-3.3.5-2.fc27.x86_64.rpm.html
+
+# Install RMP fusion from 
+
+http://download1.rpmfusion.org/free/fedora
+Select: rpmfusion-free-release-stable.noarch.rpm
+
+dnf install ffmpeg
+

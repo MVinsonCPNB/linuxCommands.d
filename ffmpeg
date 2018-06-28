@@ -1,0 +1,3 @@
+# Convert an video.ovg to a video.avi
+
+ffmpeg -i video.ovg video.avi
