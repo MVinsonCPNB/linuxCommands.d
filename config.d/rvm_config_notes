@@ -1,0 +1,14 @@
+# Why are there multiple copies of the same path to rmv
+
+# rvm configuration file locations
+
+/etc/rvmrc
+    rvm_path="/home/mv/.rvm"
+
+#RVM sourcing line required to load RMV for Single-User
+~/.bash_profile
+   
+# non-login shell bashrc load config
+
+~/.bashrc
+
