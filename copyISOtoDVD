@@ -1,0 +1,9 @@
+# Burning discs with wodim from the command line
+
+$wodim --devices
+
+0   dev='dev/scd0'    rwrw-- : 'TSSTcorp'  'DVD+-RW TS-T633C'
+
+#using the device path taken from above enter the next command
+
+wodim -v dev='dev/scd0 speed=4 -eject /path/to/filename.iso
