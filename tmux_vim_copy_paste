@@ -1,0 +1,18 @@
+# using tmux copy mode with vim
+# STANDARD TMUX SYMBOL C-b means, Control+b on the keyboard
+
+# Copy Mode
+
+    C-b         ; start tmux command
+    [           ; Enter copy mode
+    C-space     ; Begin selecting with arrow keys
+    Alt-w       ; Copy select to buffer
+
+# Paste Mode    
+
+    C-b         ; start tmux command
+    ]           ; paste buffer to screen
+
+# Paste contents from exterior clipboard
+
+    C+Alt+v
