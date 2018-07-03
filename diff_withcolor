@@ -1,0 +1,8 @@
+# diff is used to display the difference between single files or 
+# a directory of files 
+
+# man diff
+# info diff (comprehensive read)
+
+
+diff --color=auto overdrawn_bankAcc/RyanAndMonicaJob.java synchronized_bankAcc/RyanAndMonicaJob.java
