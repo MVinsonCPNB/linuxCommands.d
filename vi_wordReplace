@@ -1,0 +1,12 @@
+# Replace one word with another throughout the whole text file
+
+:%s/mainDisplay/outputTextArea/g
+
+# Find each occurrence of mainDisplay (in all lines), and 
+# replace with 'outputTextArea'
+
+
+For specific lines: 
+:6,10s/foo/bar/g
+
+Change each 'foo' to 'bar' for all lines from line 6 to line 10 inclusive.
