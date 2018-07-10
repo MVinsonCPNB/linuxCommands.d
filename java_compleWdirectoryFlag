@@ -1,0 +1,11 @@
+Compiling with the -d(directory) flag
+
+javac -d ../classes MyApp.java
+
+           OR
+
+javac -d ../classes *.java
+
+
+# using the directory flag keeps the java file 
+# from the compiled class files

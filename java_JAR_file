@@ -1,0 +1,25 @@
+" A JAR file is a Java ARchiver.  It's based on the pkzip file format, and
+    it lets you bundle all your classes so that instead of presenting your
+    client with 28 class files, you hand over just a single JAR file.  If
+    you're familiar with the tar command on UNIX, you'll recognize the jar
+    tool commands.
+
+    1.) Make sure all of your class files are in the classes directory
+
+    2.) Create a manifest.txt file that states which class has the 
+        main() method
+            
+            Main-Class: MyApp ("NOTE: press the return key here")
+
+    3.) Run the jar tool to create a JAR file that contains everything
+        in the classes directory, plus the manifest
+
+        $cd MyProject/classes
+        $jar -cvmf manifest.txt app1.jar *.class
+                        OR
+        $jar -cvmf manifest.txt app1.jar MyApp.class
+
+    4.) Run a jar file 
+            java -jar app1.jar
+
+"(Java Head First, pg 586).
