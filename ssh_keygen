@@ -1,0 +1,3 @@
+# Generate an ssh-keygen key 
+
+ssh-keygen -t rsa -b 4096 -C "MVinsonCPNB@gmail.com"
