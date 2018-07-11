@@ -25,9 +25,10 @@ Enter to keep the current selection[+], or type selection number: 4
 
 alternatives --install /usr/bin/jar jar /opt/jdk1.8.0_171/bin/jar 2
 alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_171/bin/javac 2
+alternatives --install /usr/bin/javah javah /opt/jdk1.8.0_171/bin/java
 alternatives --set jar /opt/jdk1.8.0_171/bin/jar
 alternatives --set javac /opt/jdk1.8.0_171/bin/javac
-
+alternatives --set javah /opt/jdk1.8.0_171/bin/javah
 
 java -version
 

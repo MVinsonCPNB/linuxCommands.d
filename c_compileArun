@@ -1,0 +1,5 @@
+# Compile a c program 
+
+gcc -o outputFileName.exe filename.c
+
+./outputFileName.exe
