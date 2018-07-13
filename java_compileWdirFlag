@@ -6,6 +6,9 @@ javac -d ../classes MyApp.java
 
 javac -d ../classes *.java
 
+           OR
+
+javac -d ../classes com/headfirstjava/PackageExercise.java
 
 # using the directory flag keeps the java file 
 # from the compiled class files
