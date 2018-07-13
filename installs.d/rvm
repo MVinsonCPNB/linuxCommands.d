@@ -47,4 +47,39 @@ Installation of RVM in /home/lthorse/.rvm/ is almost complete:
   * To start using RVM you need to run `source /home/lthorse/.rvm/scripts/rvm`
     in all your open shell windows, in rare cases you need to reopen all shell windows.
 
+#after running source install a version of ruby
+rmv install 2.5.1
+
+
+*******~/.bashrc file config so terminal does not have to be run as shell login********
+
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# START OF COPIED FROM ~/.bash_profile to avoid running as shell login
+
+# .bash_profile
+
+# User specific environment and startup programs
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# END OF COPIED FROM ~/.bash_profile
+
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# COMMENTED OUT BECAUSE ITS ALREADY EXISTS export PATH="$PATH:$HOME/.rvm/bin"
+
+**************END OF ~/.bashrc **************************************************
+
+
 **********done************
