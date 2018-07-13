@@ -1,0 +1,62 @@
+# various rvm commands
+
+#To install a new version of ruby 
+
+rvm install 1.9.2
+
+	OR
+
+rvm install jruby
+
+
+
+#switch to a different ruby version 
+
+rvm use 1.9.2
+
+
+
+#switch back to system ruby
+
+rvm system
+
+
+*********************************************************
+#Project Specific Ruby and Gems
+	--You could switch to a project directory
+	 and have the correct Ruby implementation loaded?
+	--You could isolate gems between projects?
+By placing a .rvmrc file into the root directory of 
+a project you can have project specific ruby and gems
+
+For example, a project using Ruby Enterprise Edition
+Project Name myProject
+
+-- create .rvmrc in ~/myProject/.rvmrc
+
+-- within the .rvmrc
+ree@myProject
+
+-- (above) reads ruby enterprise edition for myProject
+
+Another example is if the project used JRuby then,
+-- within the .rvmrc
+jruby@mySecondProject
+
+#When changing to the directory with a .rvmrc file specified
+#, rvm will load or install the specified version of ruby.
+
+#Next, is to create a gemset for the project
+
+-- a prompt should be displayed asking to create a gemset
+rvm gemset create 'myProject'
+
+*********************************************************
+
+#View the path where a projects gem files are loacted
+
+gem env gemdir
+	-- if a gemset is defined it should be an isolated env
+
+
+

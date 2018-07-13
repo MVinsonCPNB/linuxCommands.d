@@ -1,0 +1,3 @@
+# output your bios info
+
+$sudo dmidecode -t 0
