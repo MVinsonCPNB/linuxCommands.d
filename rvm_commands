@@ -59,4 +59,20 @@ gem env gemdir
 	-- if a gemset is defined it should be an isolated env
 
 
+#Gemset usage  See: https://rvm.io/gemsets
 
+-- To see the name of the current gemset
+$ rvm gemset use teddy
+$ rvm gemset name
+
+-- list full directory path for the current gemset
+$rvm gemdir
+
+-- list all named gemsets for the current ruby interpreter
+$rvm gemset list
+
+-- list all named gemsets for all interpreters
+
+# Project .rvmrc
+-- use the command so set a project to a specific gemset
+	rvm 2.5.1@ror_sample_app

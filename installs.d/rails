@@ -1,0 +1,11 @@
+# after initial setup of the rvm and ruby environment
+# getting an existing project up and running
+# Not this is NOT instructions for a new setup
+
+sudo dnf install nodejs
+gem install rails -v 5.1.6
+
+gem install bundler
+bundle update
+
+# localhost:3000 now displays the projects home screen
