@@ -5,3 +5,19 @@ press :w [new filename]  to save as a new file name
 press :q to quit
 press esc to exit --insert-- mode
 search www.safaribooksonline.com/library/view/fedora-linux/0596526822/ch04s04.html
+
+
+# indent multiple lines 
+
+Select a row with 'V'
+move down with 'j'
+to indent press '>'
+
+
+# indent curly-braces
+
+move to cursor to one of the curly braces
+press '>' '%'
+
+# paste copy into an indented section 
+instead of using 'p', use ']'
