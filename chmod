@@ -1,0 +1,18 @@
+# File Permissions
+
+# Below says: for 'u' user 'g' group and 'o' other
+# add the permisions of 'r' read 'w' write and 
+# 'e' execute to the directory
+# 1st rwx = 'u' user or owner of the file
+# 2nd rwx = 'g' group of the file
+# 3rd rwx = 'o' other or everyone else
+
+chmod ugo+rwx ~/dev/mydirectory
+
+# To recursively assign permissions 
+
+chmod -R oug=rwx ~/dev/mydirectory
+
+           OR 
+
+chmod -R oug-rwx ~/dev/mydirectory

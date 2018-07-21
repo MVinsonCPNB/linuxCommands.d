@@ -2,7 +2,7 @@
 
 #To install a new version of ruby 
 
-rvm install 1.9.2
+rvm install 2.5.1
 
 	OR
 
@@ -12,7 +12,7 @@ rvm install jruby
 
 #switch to a different ruby version 
 
-rvm use 1.9.2
+rvm use 2.5.1
 
 
 

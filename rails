@@ -23,3 +23,5 @@ rails generate
 rails test
 bundle install
 
+#rails console
+rails console       -- a cml program for interacting with Rails applications
