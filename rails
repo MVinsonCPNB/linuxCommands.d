@@ -25,3 +25,12 @@ bundle install
 
 #rails console
 rails console       -- a cml program for interacting with Rails applications
+
+# integration test page 236 from Ruby on Rails tutorial
+# requires gem be added to gem file: gem 'rails-controller-testing'
+
+$ rails generate integration_test site_layout  
+     # will be used to test each link on a page links to the correct path
+
+# run the integration test
+$ rails test:integration
