@@ -1,7 +1,7 @@
 #scaffold for controller
 rails generate controller StaticPages home help
-       -- <above> generates a controller for staticPages with two actions home and help
-	-- generates file named static_pages_controller.rb
+       # <above> generates a controller for staticPages with two actions home and help
+	   # generates file named static_pages_controller.rb
 #scaffold commands undo
 rails destroy controller StaticPages home help
 
@@ -11,9 +11,9 @@ rails generate model User name:string email:string
 rails destroy model User
 
 #database
-rails db:migrate   	-- Migrations change the state of the database using the command
-rails db:rollback	-- undo a single migration step using
-rails db:migrate VERSION=0   	-- takes the database back to the very beginning
+rails db:migrate   	        # migrations change the state of the database using the command
+rails db:rollback	        # undo a single migration step using
+rails db:migrate VERSION=0  # takes the database back to the very beginning
 
 
 #rails common commands
@@ -24,8 +24,24 @@ rails test
 bundle install
 
 #rails console
-rails console       -- a cml program for interacting with Rails applications
+rails console               # a cml program for interacting with Rails applications
 
+rails console  --sandbox    # any modifications made will be rooled back on exit
+
+# creating an object in the rails console
+user = User.new(name: "mike", email: "myemail@example.com")
+user.valid?
+user.save                   # stores the user into the database
+user                        # prints out all the data the database creates like id and timestamps
+
+user.destroy                # the inverse of create, not sure it removes from the database though
+
+User.find(1)                # find user with primary key ID of 1
+
+User.find_by(email: "myemail@example.com") # finds user by column -> value
+User.all                    # returns all the users in the database
+
+User.update_attributes(name: "The Dude", email: "dude@abides.org") # updates without having to run user.save
 # integration test page 236 from Ruby on Rails tutorial
 # requires gem be added to gem file: gem 'rails-controller-testing'
 
