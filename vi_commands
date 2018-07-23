@@ -21,3 +21,11 @@ press '>' '%'
 
 # paste copy into an indented section 
 instead of using 'p', use ']'
+
+# comment out a section of code 
+
+ctrl + v (visual block mode)
+select the virtical line of comments you want
+Shift + i (captial I)
+insert the text you want, i.e #
+press Esc (wait for it to update), presss Esc again

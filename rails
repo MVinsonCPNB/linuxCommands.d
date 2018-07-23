@@ -5,10 +5,27 @@ rails generate controller StaticPages home help
 #scaffold commands undo
 rails destroy controller StaticPages home help
 
-#scaffold for model
+#scaffold for model for database table
 rails generate model User name:string email:string
 #destroy model
 rails destroy model User
+
+# create a password column for the users table
+rails generate migration add_password_digest_to_users password_digest:string
+
+# run tests on the models in test/models/user_test.rb
+rails test:models
+
+# test model validation: defined within  app/models/user.rb
+# ... validates :name, presence: true ...
+rails console --sandbox
+user = User.new(name: "", email: "mhartl@example.com")
+user.valid?
+=> false
+user.errors.full_message
+=> ["Name can't be blank"]
+user.save
+=> false
 
 #database
 rails db:migrate   	        # migrations change the state of the database using the command
@@ -18,7 +35,10 @@ rails db:migrate VERSION=0  # takes the database back to the very beginning
 
 #rails common commands
 rails server
+rails server --environment production
 rails console
+rails console test
+rails console production    # runs using the production gems
 rails generate
 rails test
 bundle install
@@ -42,11 +62,18 @@ User.find_by(email: "myemail@example.com") # finds user by column -> value
 User.all                    # returns all the users in the database
 
 User.update_attributes(name: "The Dude", email: "dude@abides.org") # updates without having to run user.save
+
+
 # integration test page 236 from Ruby on Rails tutorial
 # requires gem be added to gem file: gem 'rails-controller-testing'
 
+
+# will be used to test each link on a page links to the correct path
 $ rails generate integration_test site_layout  
-     # will be used to test each link on a page links to the correct path
+
+# test the sign up form does not allow junk data to be created as a new user
+# such as invalid email address, user name, or passwords
+$ rails generate integration_test users_signup
 
 # run the integration test
 $ rails test:integration
