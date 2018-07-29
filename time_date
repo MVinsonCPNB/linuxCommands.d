@@ -1,0 +1,39 @@
+https://docs.fedoraproject.org/f28/system-administrators-guide/basic-system-configuration/Configuring_the_Date_and_Time.html
+
+# Using the timedatectl command
+
+	$ timedatectl
+
+# Change the current time
+
+	$ timedatectl set-time HH:MM:SS
+
+# Set time and date
+
+	$ timedatectl set-time "2013-06-02 23:25:00"
+
+# Changing the Time Zone
+
+	$ timedatectl list-timezones
+	$ timedatectl set-timezone time_zone
+
+# Synchronizing the System Clock with a Remote Server
+
+	$ timedatectl set-ntp boolen
+	$ timedatectl set-ntp yes
+
+# Display the date
+
+	$ date
+	$ date --utc
+
+	$ date +"format"
+	$ date +"%Y-%m-%d %H:%M"
+
+# Set the date
+
+	$ date --set YYYY-MM-DD
+
+# Displaying the Hardware Clock or Real-Time Clock (RTC)
+
+	$ hwclock

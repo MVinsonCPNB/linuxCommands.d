@@ -1,0 +1,16 @@
+https://docs.fedoraproject.org/f28/system-administrators-guide/basic-system-configuration/System_Locale_and_Keyboard_Configuration.html
+
+# See etc/locale.conf for locale configuration
+
+Display the currently set locale
+
+$ localectl status
+
+$ localectl list-locales
+
+# Setting the locale
+$ localectl set-locale LANG=<locale name here>
+
+
+# Listing Available Keymaps
+$ localectl list-keymaps
