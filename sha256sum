@@ -3,3 +3,7 @@ how to get the message digest using sha256
 Navigate to directory of file
 
 sha256sum nameoffileyouwhishtocheck.rpm
+
+# check sha1 
+
+$ sha1sum {file}

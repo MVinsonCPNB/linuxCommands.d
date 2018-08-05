@@ -1,0 +1,5 @@
+# Run a .sh file
+
+$ sudo chmod +x /path/to/file.sh
+
+$ ./file.sh

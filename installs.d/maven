@@ -1,0 +1,23 @@
+# Instructions on how to install Maven on linux
+
+# Go to http://maven.apache.org
+
+# download apache-maven-3.5.4-bin.zip
+
+# check sha1 digest: 8a0d9cc9d4da3fac195de8e1e99fe07158d54192
+
+$ sha1sum apache-maven-3.5.4-bin.zip
+8a0d9cc9d4da3fac195de8e1e99fe07158d54192
+
+# unzip file
+
+unzip apache-maven-3.5.4-bin.zip ~/maven
+
+# Create Environment Variables
+
+$ export M2_HOME=/home/mvinson/maven/apache-maven-3.5.4
+$ export PATH=/home/mvinson/maven/apache-maven-3.5.4/bin:${PATH}
+
+# Test the install worked
+$ mvn --version
+

@@ -1,0 +1,9 @@
+# When a Java update takes place on fedora you may have to enter the netbeans configuration and point to the new java installed if the older version was removed.  
+
+For Example: 
+
+Navigate to netbeans-8.2/etc/netbeans.conf
+
+netbeans_jdkhome="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.172-12.b11.fc27.x86_64"
+
+Locate follow the path and see if the JVM still exists, if not change the path to point to a new JVM.

@@ -77,3 +77,6 @@ $ rails generate integration_test users_signup
 
 # run the integration test
 $ rails test:integration
+
+# view all routes available within the app
+$ rails routes

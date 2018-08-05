@@ -1,0 +1,52 @@
+# Maven is used to help with project dependencies and structure
+
+# Download all maven plugins, templates for project structure
+$ maven archetype:generate
+
+# Filter search spring-jsf-jpa
+# Enter the number for the correct frame work
+
+'groupID': git.mvinson.java
+# Name of the applicaion itself: jar name
+'artifactId' : MavenTestApp
+'version' : 1.0-SNAPSHOT
+'package' : git.mvinson.java
+
+# Compile the program
+# Navagate to the dir where pom.xml is
+$ mvn compile
+
+# Package the compiled code into a jar file
+$ mvn package
+
+
+########  New Project using Quick Start Architecutre ########
+Follow Tutorial at: https://www.devdungeon.com/content/packet-capturing-java-pcap4j
+mvn archetype:generate -DgroupId=com.github.username -DartifactId=pcap -Dversion=1.0.0 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+# Adding the pcap4j dependency
+
+<!-- pom.xml -->
+<project>
+    ...
+    <dependencies>
+        ...
+        <dependency>
+            <groupId>org.pcap4j</groupId>
+            <artifactId>pcap4j-core</artifactId>
+            <version>1.7.3</version>
+            <type>jar</type>
+        </dependency>
+        ...
+    </dependencies>
+    ...
+</project>
+
+# Much more in tutorial at devdungon 
+#
+# Compile and Run the project
+
+$ mvn package 
+$ java -jar target/uber-pcap-1.0.0.jar
+
+
