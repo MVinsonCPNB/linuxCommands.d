@@ -45,5 +45,9 @@ git commit -a -m "Make a major mistake"
 git checkout master
 git branch -D topic-branch        -- Unlike the -d flage, the -D flag will delet the branch even though we haven't merged in the changes
 
+# REDIRECT TO A NEW ORIGIN
+ git remote set-url origin [updated link url https://........git]
+ Alternatively, if you like the long way it is:
 
-
+ git remote rm origin
+ git remote add origin [updated link]
