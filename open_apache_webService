@@ -1,0 +1,14 @@
+#Check the system if the port is open
+
+sudo netstat -tlpn
+
+sudo lsof -Pi tcp:80 | head -3
+
+
+# Open port 80 to others within the network
+
+iptables -I INPUT -p TCP --dport 80 -j ACCEPT
+
+# Block port 80 to others within the network
+
+iptables -I INPUT -p TCP --dport 80 -j DROP
