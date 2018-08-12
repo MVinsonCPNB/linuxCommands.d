@@ -1,0 +1,10 @@
+###Info about Wordpress
+
+
+###WordPress salt Keys
+These secret keys are used by WordPress to add random elements to your passwords
+and in some other situations. This will help keep your wordPress installation
+uniquely protected.  No one else is likely to choose the same unique keys that
+you choose, and therefore, breaking or hacking into your site will be more difficult.
+You can get some secret keys generated form https://api.wordpress.org/secret-key/1.1/salt/
+----copy the output to /var/www/wordpress/wp-config.php

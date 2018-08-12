@@ -1,89 +1,32 @@
-WordPress started as a simple blogging system, but has evolved into a reputable content management system. It’s also one of the most popular open source projects. Furthermore, it’s easy to set up WordPress on your Fedora system.
-
-Install the packages
-Fedora provides a set of pre-packaged software to make installation easy. Open a terminal, and at the command prompt, use sudo to install the following packages.
-
-sudo dnf install @"Web Server" wordpress php-mysqlnd mariadb-server
-This example assumes you’ll run the web and database servers on the same machine. This is often the case for students and developers alike.
-
-Enable the web and database services to start at boot time, then start them immediately:
-
-sudo systemctl enable httpd.service mariadb.service
-sudo systemctl start httpd.service mariadb.service
-Set up the database server
-If this is your first use of MariaDB, you should create a password for your root user. Store it somewhere secure and safe, in case you forget it. Don’t use the system’s own root (administrator) password.
-
-sudo mysqladmin -u root password
-Next, create a database. You can host more than one WordPress site on a machine. Therefore, you may want to choose a distinctive name for yours. For instance, this example uses mywpsite. The -p switch prompts you for a password. You’ll need that, since you’ve added a password for root.
-
-sudo mysqladmin create mywpsite -u root -p
-Next, set up a special privileged user and password for the database. The web app uses these credentials to run. Use the standard mysql client program for this step. The -D mysql option attaches to the built-in mysql database where privileges are stored.
-
-Your input is shown in boldface in the example below. Make sure to use a strong password and not password itself.
-
-$ sudo mysql -D mysql -u root -p
-Enter password:
-Reading table information for completion of table and column names
-You can turn off this feature to get a quicker startup with -A
-
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 6
-Server version: 10.1.18-MariaDB MariaDB Server
-
-Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-MariaDB [mysql]> GRANT ALL PRIVILEGES ON mywpsite.* TO 'sqluser'@'localhost' IDENTIFIED BY 'password';
-Query OK, 0 rows affected (0.00 sec)
-
-MariaDB [mysql]> FLUSH PRIVILEGES;
-Query OK, 0 rows affected (0.01 sec)
-
-MariaDB [mysql]> QUIT;
-Bye
-Set up the web server
-Next, tune the SELinux parameters so the web server can perform necessary functions.
-
-sudo setsebool -P httpd_can_network_connect_db=1
-sudo setsebool -P httpd_can_sendmail=1
-Next, edit the configuration file for the web server to allow connections. The file to edit is /etc/httpd/conf.d/wordpress.conf. Change the following line:
-
-Require local
-Instead, edit it as follows:
-
-Require all granted
-Next, configure your firewall so it allows traffic on port 80 (HTTP):
-
-sudo firewall-cmd --add-service=http --permanent
-sudo firewall-cmd --reload
- 
-
-Configure WordPress
-Next, edit the /etc/wordpress/wp-config.php file. Provide the database settings needed so WordPress can use the database you provided. Here are the lines to change. Search for each and edit the required setting:
-
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'database_name_here');
-
-/** MySQL database username */
-define('DB_USER', 'username_here');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'password_here');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
-The DB_HOST setting should stay localhost if you’re serving the database on the same system as the web server.
-
-Finally, restart the web server:
-
-systemctl restart httpd
-Visit the WordPress site
-Next, you’re ready to configure the web app itself. Open a web browser on the system, or a connected system. Then browse to the IP address of your WordPress host, followed by /wordpress. For instance, your URL might be http://192.168.122.210/wordpress. If you’re on the same box, you can use http://localhost/wordpress. This step begins the setup process:
+### https://codex.wordpress.org/Installing_WordPress#Using_the_MySQL_Client
+#
 
 
+Detailed Instructions
+Step 1: Download and Extract
+Download and unzip the WordPress package from https://wordpress.org/download/.
 
-Fill out the information required. Remember to use a strong password for this account, since it has administrator access to the entire WordPress blog. Once done, select Install WordPress at the bottom.
+If you will be uploading WordPress to a remote web server, download the WordPress package to your computer with a web browser and unzip the package.
+If you will be using FTP, skip Step 2 and go to the next step - uploading files is covered later.
+If you have shell access to your web server, and are comfortable using console-based tools, you may wish to download WordPress directly to your web server using wget (or lynx or another console-based web browser) if you want to avoid FTPing:
+wget https://wordpress.org/latest.tar.gz
+Then unzip the package using: 
+tar -xzvf latest.tar.gz 
 
-A login screen appears so you can verify the WordPress username and password you just entered. Login, and the following screen appears:
+The WordPress package will extract into a folder called wordpress in the same directory that you downloaded latest.tar.gz.
+Step 2: Create the Database and a User
+If you are using a hosting provider, you may already have a WordPress database set up for you, or there may be an automated setup solution to do so. Check your hosting provider's support pages or your control panel for clues about whether or not you'll need to create one manually.
+
+If you determine that you'll need to create one manually, follow the instructions for accessing phpMyAdmin on various servers, or follow the instructions for Using Plesk, Using cPanel or Using phpMyAdmin below.
+
+If you are installing WordPress on your own web server, follow the Using phpMyAdmin or Using the MySQL Client instructions below to create your WordPress username and database.
+
+If you have only one database and it is already in use, you can install WordPress in it - just make sure to have a distinctive prefix for your tables to avoid over-writing any existing database tables.
+
+
+### Personal Notes
+
+* Install the wordpress.tar download in the /var/www/html directory
+* setup the wp-config.php file
+* setup a database user and database
+
