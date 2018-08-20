@@ -1,0 +1,38 @@
+# install tomcat on linux as development setup
+
+(browser) tomcat.apache.org
+
+>> tomcat 9.0
+>> Binary Distributions >> Core >> tar.gz
+>> save file to downloads >> extract file to ~/software folder
+
+(terminal)
+cd /home/wrkhorse001/software/apache-tomcat-9.0.11/bin
+
+chmod +x *.sh
+
+# NOTE: If setup is for a production environment 
+	tomcat would be installed at /usr/local 
+        and would assign a seperate username for 
+        tomcat.
+
+(eclipse) 
+select the server tab at the bottom
+create new server
+select apache >> tomcat 9.0
+browse to the location of tomcat's bin directory
+"/home/wrkhorse001/software/spache-tomcat-9.0.11"
+select ok
+
+(eclipse server tab)
+double click the Tomcat v9.0 Server at localhost for an Overview of the server configuration settings
+
+	(Server Locations settings)
+	Selcet Use Tomcat installation (takes control of Tomcat installation)
+        NOTE: What this setting does is allow for eclipse to deploy directly to 	the server using the deploy path sepcified, defualt value is wtpwebapps
+
+(eclispe)
+right click the Tomcat V9.0 server in the Servers tab and start, accept changes.
+Select Window >> show view >> other >> search for web >> select Internal Web Browser
+
+Enter http://localhost:8080  to verify the server is running and accessable.

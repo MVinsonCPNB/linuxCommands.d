@@ -1,0 +1,35 @@
+# install Eclipse 
+
+Navagate to eclipse.org 
+
+Click install 64-bit version
+
+Download the file
+
+Open file explorer
+
+Double click the file
+
+Drag the eclipse installer file to the desktop
+
+double click the icon on the desktop
+
+right click eclipse-inst and select run
+
+Select the Eclipse IDE for Java EE Developers (best for the spring framework)
+
+click the hamburger menu and select advanced options
+
+select eclipse IDE for Java EE Developers  64-Bit
+Product version Photon
+Select next
+Dont select any tools, and press next again.
+
+create a folder called software and use that to install eclipse
+
+rename the folder eclipse and not eclipse-photon
+
+delete the installer folder
+
+
+

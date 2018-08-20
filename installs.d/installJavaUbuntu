@@ -1,0 +1,18 @@
+#Install Java on Ubuntu
+
+# update the packages
+sudo apt-get update
+
+sudo add-apt-repository ppa:webupd8team/java
+
+sudo apt-get update
+
+sudo apt-get install oracle-java8-installer
+
+# accept the Oracle binary license
+
+sudo update-alternatives --config java
+
+java -version 
+
+# should show java version "1.8.0_181"

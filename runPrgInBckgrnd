@@ -1,0 +1,7 @@
+# run a program in the background
+
+eclipse &
+
+jobs 
+
+disown -h %1
