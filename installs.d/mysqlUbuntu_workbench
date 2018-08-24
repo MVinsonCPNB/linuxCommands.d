@@ -1,0 +1,20 @@
+### Navagate to:
+* https://dev.mysql.com/downloads/repo/apt/
+
+* Download the Ubuntu / Debian (Architecutre Independent), DEB Package
+
+* sudo dpkg -i ~/Downloads/mysql-apt-config_0.8.2-1_all.deb
+
+* sudo apt-get update
+
+* sudo apt-get install mysql-server
+
+* sudo service mysql status
+
+* sudo service mysql stop
+
+* sudo service mysql start
+
+### Install mysql-workbench
+
+* sudo apt-get install mysql-workbench-community
